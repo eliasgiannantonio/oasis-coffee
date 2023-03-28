@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+    margin: auto;
+}
+
+body {
+    font-family: 'Inter', 'Sans-seriff';
+}
+
+header {
+    width: 100%;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+li{
+    color: white;
+    list-style: none;
+}
+
+nav ul {
+    display: flex;
+    gap: 1rem;
+}
