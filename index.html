@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,23 +12,45 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;600;700&display=swap" rel="stylesheet">
     <script src="./script.js"></script>
 </head>
-<body>
-    <header>
-        <div class="logo">
-            <h3>oasis coffee</h3>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="">Catálogo</a></li>
-                <li><a href="">Sobre nosotros</a></li>
-                <li><a href="">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="hero">
 
-        </section>
-    </main>
+<body>
+    <div class="wrapper_nav_hero">
+        <header>
+            <a href="#" class="logo">
+                <img src="./assets/img/logo_dark.png">
+            </a>
+            <div class="toggleMenu" onclick="toggleMenu();"></div>
+            <nav class="barraNav">
+                <ul>
+                    <li><a href="#">Catálogo</a></li>
+                    <li><a href="#">Sobre nosotros</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+            <section id="hero">
+                <div class="descripcion_hero">
+                    <h3>La perfección está en el primer sorbo.</h3>
+                </div>
+                <div class="imagen_cafe">
+                    <img src="./assets/img/cafe.png">
+                </div>
+            </section>
+    </div>
+    <svg class="curva_svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
+        <path fill="#0f0804" fill-opacity="1" d="M0,128L48,112C96,96,192,64,288,53.3C384,43,480,53,576,74.7C672,96,768,128,864,128C960,128,1056,96,1152,80C1248,64,1344,64,1392,64L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+    </svg>
+    <section class="coffee_displayer">
+        <div class="coffee_selected active" id="moca">
+            <img src="./assets/img/cold_brew_display.svg">
+            <div class="display_description">
+                <h5 class="coffee_title">Cold Brew</h5>
+                <p class="description">Un café refrescante y lleno de sabor. Nuestro Cold Brew Coffee es una experiencia 
+                artesanal y suave que no te puedes perder.</p>
+            </div>
+        </div>
+    </section>
+
 </body>
+
 </html>

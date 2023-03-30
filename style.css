@@ -1,26 +1,227 @@
 * {
     box-sizing: border-box;
-    margin: auto;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
 }
 
 body {
     font-family: 'Inter', 'Sans-seriff';
+    color: white;
+    background: url(./assets/img/hero_background_granos.png);
+    mix-blend-mode: normal;
+    box-shadow: inset 20px 20px 96px 45px #0D0404;
+    background-repeat: no-repeat;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.wrapper_nav_hero {
+    max-width: 1378px;
+    margin: 0 auto;
+    
 }
 
 header {
     width: 100%;
-    background: #000;
+    height: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 40px 6.5em;
+    flex-grow: 1;
+    
 }
 
-li{
-    color: white;
-    list-style: none;
+nav {
+    margin: 4em;
 }
 
 nav ul {
     display: flex;
-    gap: 1rem;
+    list-style-type: none;
+    gap: 8.3em;
+    margin: 0;
+}
+
+nav ul li {
+    list-style: none;
+    padding: 2rem;
+    font-size: 1.6rem;
+}
+
+header a {
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -ms-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+}
+
+.logo {
+    margin-right: auto;
+}
+
+.logo img {
+    width: 220px;
+    height: auto;
+}
+
+#hero {
+    z-index: -1;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    font-size: 3rem;
+    text-align: center;
+    line-height: 60px;
+    flex-basis: 100%;
+    position: relative;
+    bottom: 100px;
+    padding-right: 80px;
+}
+
+
+
+.imagen_cafe img {
+    max-width: 80%;
+    object-fit: cover;
+    position: relative;
+    top: 30px
+}
+
+.descripcion_hero h3 {
+    display: inline-block;
+    font-size: 6.1rem;
+    max-width: 589px;
+}
+
+.curva_svg {
+    width: 100%;
+    position: relative;
+    bottom: 400px;
+    z-index: -2;
+    height: 600px;
+    box-shadow: inset 0px -65px 78px #050301;
+}
+
+.coffee_displayer {
+    position: absolute;
+    top: 80%;
+    width: 100%;
+}
+
+.coffee_selected {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: space-around;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    gap: 3rem;
+    position: relative;
+    left: 57px;
+}
+
+.display_description {
+    display: flex;
+    flex-direction: column;
+}
+
+.coffee_title {
+    color: #FFDA93;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 53px;
+    line-height: 64px;
+}
+
+.description {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    inline-size: 200px;
+    overflow-wrap: break-word;
+}
+
+@media screen and (max-width: 1000px) {
+    .toggleMenu {
+        position: absolute;
+        right: 50px;
+        background-image: url(./assets/img/responsive_icon.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 30px;
+        width: 30px;
+        height: 30px;
+        padding: 2em;
+        z-index: 10000;
+
+    }
+
+    .toggleMenu.active {
+        position: fixed;
+        background-image: url(./assets/img/responsive_icon.png);
+        background-size: 25px;
+    }
+
+    .barraNav {
+        justify-content: center;
+        flex-direction: column;
+        transform: scale(1, 0);
+        -webkit-transform: scale(1, 0);
+        -moz-transform: scale(1, 0);
+        -ms-transform: scale(1, 0);
+        -o-transform: scale(1, 0);
+        transform-origin: top;
+        max-height: 0;
+        opacity: 0;
+
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    .barraNav.active {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        transform: scale(1, 1);
+        -webkit-transform: scale(1, 1);
+        -moz-transform: scale(1, 1);
+        -ms-transform: scale(1, 1);
+        -o-transform: scale(1, 1);
+        transform-origin: top;
+        max-height: 100%;
+        opacity: 1;
+        background: #201106;
+        z-index: 999;
+        padding-top: 50%;
+    }
+
+    .barraNav {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .barraNav ul li {
+        display: block;
+    }
 }
